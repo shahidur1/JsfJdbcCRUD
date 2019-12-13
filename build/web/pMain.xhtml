@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="3">
+                <h:outputLabel value="ID"/>
+                <h:outputLabel value=":"/>
+                <h:inputText value="#{student.id}"/>
+                
+                <h:outputLabel value="Name"/>
+                <h:outputLabel value=":"/>
+                <h:inputText value="#{student.name}"/>
+                
+                <h:outputLabel value="Email"/>
+                <h:outputLabel value=":"/>
+                <h:inputText value="#{student.email}"/>
+                
+                <h:outputLabel value="Phone"/>
+                <h:outputLabel value=":"/>
+                <h:inputText value="#{student.phone}"/>
+                
+                <h:commandButton value="Insert" actionListener="#{student.doInsert()}" action="pMain.xhtml"/>
+                <h:commandButton value="Update" actionListener="#{student.doUpdate()}" action="pDropUpdate.xhtml"/>
+                <h:commandButton value="Delete" actionListener="#{student.doDelete()}" action="pDropDelete.xhtml"/>
+                <h:commandButton value="Show" actionListener="#{student.show()}" action="pShow.xhtml"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

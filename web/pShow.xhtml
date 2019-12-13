@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            table tr td{
+                border: 1px solid green;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <table>
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Phone</td>
+                </tr>
+                <c:forEach var="row" items="#{student.stList}">
+                    <tr>
+                        <td><h:outputText value="#{row.id}"/></td>
+                        <td><h:outputText value="#{row.name}"/></td>
+                        <td><h:outputText value="#{row.email}"/></td>
+                        <td><h:outputText value="#{row.phone}"/></td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </h:form>
+        <h:form>
+            <h:commandButton value="Home" action="pMain.xhtml"/>
+        </h:form>
+    </h:body>
+</html>
+
